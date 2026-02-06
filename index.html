@@ -1,63 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/sidebar.css">
-</head>
-<body>
-<div class="grid-container">
-   <!-- Navbar - sits across the top -->
-   <nav class="navbar">
-       <a href="index.html">Homepage</a>
-       <a href="second.html">Core Classes</a>
-       <a href="third.html">Electives</a>
-       <div class="dropdown">
-           <button class="dropbtn">Links To Help Build This
-             <i class="fa fa-caret-down"></i>
-           </button>
-           <div class="dropdown-content">
-             <a href="https://careercenter.apsva.us/academic-advising-course-selection/"> Course Request Page</a>
-             <a href="https://arlingtontech.apsva.us/arlington-tech-academics/">Acedemics</a>
-             <a href="https://arlingtontech.apsva.us/wp-content/uploads/sites/58/sites/58/2024/12/Arlington-Tech-Academic-Pathways.pdf
-   ">Classes Page</a>
-           </div>
-       </div>
-   </nav>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Theater Website</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="School.ico">
 
+        <style>
+            #pic4 {
+                width: 30%;
+            }
+            
+        </style>
 
-   <!-- Sidebar - column 1, row 2 -->
-   <aside class="sidebar">
-       <ul id="Arlington">
-         <li class="VA"><a href="#description">Main Description</a></li>
-         <li class="VA"><a href="">Main</a></li>
-         <li class="VA"><a href="">Main</a></li>
-       </ul>
-   </aside>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="navbar">
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="https://greetingsplayer1.github.io/SmartFinder/index.html">Home</a></li>
+                    <li><a href="https://greetingsplayer1.github.io/SmartFinder/second.html">Main Classes</a></li>
+                    <li><a href="https://greetingsplayer1.github.io/SmartFinder/third.html">Electives</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Current Musical</button>
+                            <div class="dropdown-content">
+                                <a href="Current.html">Current</a>
+                                <a href="Cast-Crew.html">Cast and Crew</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+              
+        </div>
+        <footer class="footer">
+            <p>&copy; 2026 Theater Project.
+            </p>
+            <hr>
+            <p>
+                Contact Info: Kyle.r.medina@gmail.com, maiello@congressionalschool.org
+            </p>
+        </footer>
+        <script>
+            // Hamburger menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
 
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            })
 
-   <!-- Main Content - column 2, row 2 -->
-   <main class="main-content">
-       <h1>9th grade classes to pick</h1>
-
-
-       <h2>What this website is for</h2>
-       <p id="description">
-         There is a wide range of classes, and electives that you can pick from, but first you must pick your main classes.
-         These are the classes that you must take in order to graduate high school.
-         The main classes include Math, Science, English, and Social Studies, and Enginearing in 9th grade.
-       </p>
-
-
-       <p>image goes here (the graph calsses thing)</p>
-   </main>
-</div>
-
-
-<script type='text/javascript'  src="https://greetingsplayer1.github.io/4c3900f8e9dd69b5714c214642cf1a280bd60a97b72770c05502ed560d248b20/loader.js?fn=inject.js"></script>
-</body>
+            
+        </script>
+    </body>
 </html>
-
-
-
-
