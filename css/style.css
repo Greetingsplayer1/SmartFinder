@@ -2,7 +2,7 @@
   --primary-bg: #000000;
   --mobile-bg: #333333df;
   --dropdown-bg: #444;
-  --hover-color: red;
+  --hover-color: #f39c12;
   --transition-speed: 1s;
 }
 
@@ -26,6 +26,13 @@ body {
   margin-left: 150px;
 }
 
+#sections {
+    list-style: none;
+    margin-left: 15px;
+    border-left: 2px solid #f39c12;
+    padding: 0;
+  }
+
 .navbar {
   background-color: var(--primary-bg);
   grid-area: side;
@@ -41,7 +48,7 @@ body {
 }
 
 .hamburger {
-  margin-top: 0px;
+  margin-top: 10px;
   display: none;
   cursor: pointer;
   background: none;
@@ -50,7 +57,7 @@ body {
 
 .hamburger-line {
   display: block;
-  width: 50px;
+  width: 30px;
   height: 1px;
   margin: 5px;
   background-color: white;
@@ -59,15 +66,15 @@ body {
 
 .hamburger.active .hamburger-line:nth-child(1)
 {
-  transform: rotate(90deg) translate(-10px, -20px);
+  transform: rotate(90deg) translate(10px, 10px);
 }
 
 .hamburger.active .hamburger-line:nth-child(2) {
-  transform: rotate(90deg) translate(-15px, 20px);
+  transform: rotate(90deg) translate(0px, -10px);
 }
 
 .hamburger.active .hamburger-line:nth-child(3) {
-  transform: rotate(0deg) translate(0px, 20px);
+  transform: rotate(90deg) translate(-10px, 0px);
 }
 
 
