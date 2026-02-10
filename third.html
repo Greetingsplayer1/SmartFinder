@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Third - Theater Website</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+  <header class="top-navbar">
+    <button class="hamburger" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <nav class="top-nav">
+      <ul class="top-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="second.html">Classes</a></li>
+        <li><a href="third.html">Electives</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="grid-container">
+    <div class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <ul id="sections">
+          <li><a href="#history">History</a></li>
+          <li><a href="#types">Types</a></li>
+        </ul>
+        <li><a href="second.html">Main Classes</a></li>
+        <li><a href="third.html">Electives</a></li>
+      </ul>
+    </div>
+
+    <main class="main-content">
+      <h1>Third Page (Placeholder)</h1>
+      <p>This is a placeholder page. Content goes here.</p>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Theater Project.</p>
+    </footer>
+  </div>
+
+  <script>
+    // unified hamburger toggles both menus
+    const topHamburger = document.querySelector('.top-navbar .hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const topNavList = document.querySelector('.top-nav-list');
+
+    if (topHamburger) {
+      topHamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        topHamburger.classList.toggle('active');
+        if (navLinks) navLinks.classList.toggle('active');
+        if (topNavList) topNavList.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      const clickedInSide = navLinks && navLinks.contains(e.target);
+      const clickedInTop = topNavList && topNavList.contains(e.target);
+      const clickedHamburger = topHamburger && topHamburger.contains(e.target);
+      if (!clickedInSide && !clickedInTop && !clickedHamburger) {
+        if (topHamburger) topHamburger.classList.remove('active');
+        if (navLinks) navLinks.classList.remove('active');
+        if (topNavList) topNavList.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+    });
+  </script>
+</body>
+</html>
