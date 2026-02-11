@@ -12,11 +12,10 @@ body {
     position: fixed;
     top: 0;
     height: 100%;
-    overflow: none;
     grid-area: sidebar;
     font-size: 18px;
   box-shadow: 15px 0px 20px #478c07;
-  word-wrap:break-word;
+  word-wrap: break-word;
   }
 
   #sidebar li a {
