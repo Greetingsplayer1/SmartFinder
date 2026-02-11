@@ -8,13 +8,15 @@ body {
     margin: 0;
     padding: 0;
     width: 130px;
-    background-color: #34495e;
+    background-color: hsl(0, 0%, 0%);
     position: fixed;
     top: 0;
     height: 100%;
-    overflow: auto;
+    overflow: none;
     grid-area: sidebar;
     font-size: 18px;
+  box-shadow: 15px 0px 20px #478c07;
+  word-wrap:break-word;
   }
 
   #sidebar li a {
@@ -26,26 +28,26 @@ body {
   }
   
   #sidebar li a:focus {
-    outline: 3px solid #f39c12;
+    outline: 3px solid #478c07;
     outline-offset: -3px;
-    border-left: 2px solid #f39c12;
+    border-left: 2px solid #478c07;
   }
   
   #sidebar li a.active {
-    background-color: #2980b9;
+    background-color: #478c07;
     color: #ffffff;
-    border-left: 2px solid #f39c12;
+    border-left: 2px solid #478c07
   }
   
   #sidebar li a:hover:not(.active) {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    border-left: 2px solid #f39c12;
+    background-color: #478c07;
+    color: #ffffff;
+    border-left: 2px solid #478c07;
   }
 
   #sections {
     list-style: none;
     margin-left: 15px;
-    border-left: 2px solid #f39c12;
+    border-left: 2px solid #478c07;
     padding: 0;
   }

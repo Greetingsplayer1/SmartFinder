@@ -3,7 +3,8 @@
   --mobile-bg: #333333df;
   --dropdown-bg: #444;
   --hover-color: red;
-  --transition-speed: 10s;
+  --transition-speed: 1s;
+  --at-green: #478c07;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 .grid-container {
   display: grid;
   grid: 
-    "side head" 70px
+    "side head" 60px
     "side main"1fr
 	/130px 1fr;
   width: 100%;
@@ -29,7 +30,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0px;
-  position: relative;
+    box-shadow: 15px 15px 20px #478c07;
 }
 
 .hamburger {
@@ -43,24 +44,37 @@ body {
 .hamburger-line {
   display: block;
   width: 50px;
-  height: 1px;
-  margin: 5px;
+  height: 2px;
+  margin: 6px 0;
   background-color: white;
   transition: var(--transition-speed);
 }
 
-.hamburger.active .hamburger-line:nth-child(1)
-{
-  transform: rotate(90deg) translate(-10px, -20px);
+.hamburger-line:nth-child(n+4) {
+  display: none;
+}
+
+.hamburger.active .hamburger-line {
+  background-color: var(--at-green);
+}
+
+.hamburger.active .hamburger-line:nth-child(n+4) {
+  display: block;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(-50deg) translate(-15px, -5px) scaleX(.8) scaleY(.8);
 }
 
 .hamburger.active .hamburger-line:nth-child(2) {
-  transform: rotate(90deg) translate(-15px, 20px);
+  transform: rotate(50deg) translate(5px, -5px) scaleX(.8) scaleY(.8);
 }
 
 .hamburger.active .hamburger-line:nth-child(3) {
-  transform: rotate(0deg) translate(0px, 20px);
+  transform: translate(-4px, -5px) scaleX(.8) scaleY(.8);
 }
+
+
 
 
 .nav-links {
@@ -208,6 +222,7 @@ body {
     width: 100%;
     background-color: var(--mobile-bg);
     gap: 0;
+    box-shadow: 0px 15px 20px #478c07;
   }
 
   .nav-links.active {
@@ -246,7 +261,7 @@ body {
     top: 100%;
     left: 0;
     background-color: var(--dropdown-bg);
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 15px 20px #478c07;
     min-width: 100%;
     z-index: 10000;
   }

@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Third - Theater Website</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/navbar.css">
-</head>
-<body>
-  <header class="top-navbar">
-    <button class="hamburger" aria-label="Toggle menu">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-    <nav class="top-nav">
-      <ul class="top-nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="second.html">Classes</a></li>
-        <li><a href="third.html">Electives</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smart Finder</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+    </head>
+    <body>
+<div class="grid-container">
+        <ul id="sidebar">
+                <li><a href="index.html">Main Page</a></li>
+                <li>
+                   <ul id="sections">
+                       <li><a href="#top">Top</a></li>
+                          <li><a href="#cards">Explenations</a></li>
+                   </ul>
+               </li>
+                <li><a href="second.html">Main Courses</a></li>
+                <li><a href="fifth.html">Stem paths</a></li>
+                <li><a href="third.html">Electives</a></li>
+                <li><a href="fourth.html">Sources</a></li>
+            </ul>
 
-  <div class="grid-container">
-    <div class="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <ul id="sections">
-          <li><a href="#history">History</a></li>
-          <li><a href="#types">Types</a></li>
-        </ul>
-        <li><a href="second.html">Main Classes</a></li>
-        <li><a href="third.html">Electives</a></li>
-      </ul>
-    </div>
+            <div class="navbar">
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="https://greetingsplayer1.github.io/SmartFinder/index.html">Home</a></li>
+                    <li><a href="https://greetingsplayer1.github.io/SmartFinder/second.html">Main Classes</a></li>
+                    <li><a href="https://greetingsplayer1.github.io/SmartFinder/fifth.html">Stem Paths</a></li>
+                    <li><a href="https://greetingsplayer1.github.io/SmartFinder/third.html">Electives</a></li>
+                    <li><a href="https://greetingsplayer1.github.io/SmartFinder/fourth.html">Sources</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Contacts/Questions</button>
+                            <div class="dropdown-content">
+                                <a href="mailto:Kyle.r.medina@gmail.com">Email Kyle</a>
+                                <a href="another email">Placholder</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+              
+        </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; 2026 Theater Project.
+            </p>
+            <hr>
+            <p>
+                Contact Info: Kyle.r.medina@gmail.com
+            </p>
+        </footer>
+        <script>
+            // Hamburger menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
 
-    <main class="main-content">
-      <h1>Third Page (Placeholder)</h1>
-      <p>This is a placeholder page. Content goes here.</p>
-    </main>
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            })
 
-    <footer class="footer">
-      <p>&copy; 2026 Theater Project.</p>
-    </footer>
-  </div>
-
-  <script>
-    // unified hamburger toggles both menus
-    const topHamburger = document.querySelector('.top-navbar .hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const topNavList = document.querySelector('.top-nav-list');
-
-    if (topHamburger) {
-      topHamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        topHamburger.classList.toggle('active');
-        if (navLinks) navLinks.classList.toggle('active');
-        if (topNavList) topNavList.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-      });
-    }
-
-    document.addEventListener('click', (e) => {
-      const clickedInSide = navLinks && navLinks.contains(e.target);
-      const clickedInTop = topNavList && topNavList.contains(e.target);
-      const clickedHamburger = topHamburger && topHamburger.contains(e.target);
-      if (!clickedInSide && !clickedInTop && !clickedHamburger) {
-        if (topHamburger) topHamburger.classList.remove('active');
-        if (navLinks) navLinks.classList.remove('active');
-        if (topNavList) topNavList.classList.remove('active');
-        document.body.classList.remove('menu-open');
-      }
-    });
-  </script>
-</body>
+            
+        </script>
+    </body>
 </html>
