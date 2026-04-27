@@ -23,7 +23,9 @@ body {
     "head" 1fr
     "main" 1fr
 	/100% 1fr;
+  grid-template-rows: auto 100%; 
   width: 100%;
+  min-height: 100vh;
 }
 
 .navbar {
