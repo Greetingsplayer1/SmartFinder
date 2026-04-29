@@ -19,18 +19,27 @@ body {
 
 .grid-container {
   display: grid;
-  grid: 
-    "head head" 1fr
-    "main image" 1fr
-	/70.1% 1fr;
-  grid-template-rows: auto 100%; 
+  grid-template-areas:
+    "head head"
+    "main image";
+  grid-template-columns: 1fr 320px;
+  grid-template-rows: auto 1fr;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 #placeholder {
   grid-area: image;
-  margin-right: 0px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+  padding: 8px;
+}
+
+#placeholder img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .navbar {
