@@ -10,6 +10,10 @@
   --nav-bg-solid: #2d5016;
 }
 
+p {
+  font-size: 18px;
+}
+
 body {
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   margin: 0;
