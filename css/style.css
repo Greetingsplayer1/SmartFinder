@@ -1,0 +1,39 @@
+:root {
+	--bg-muted: #f6f7f9;
+	--card-bg: rgba(255,255,255,0.96);
+	--muted-text: #4d4f51;
+	--accent: #2d5016;
+	--accent-2: #5ba30a;
+	--radius: 10px;
+}
+
+html, body { height: 100%; }
+
+/* Make main content feel like a card without altering the grid */
+.main-content {
+	background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+	border-radius: 10px;
+	padding: 15px;
+	margin: 15px;
+	box-shadow: 0 10px 30px rgba(20,40,10,0.06);
+}
+
+.main-content.card h1 { margin-top: 6px; }
+
+body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: #4d4f51;; }
+h1 { font-size: 1.9rem; color: #16310a; }
+p { line-height: 1.65; margin: 10px 0; font-size: 17px; }
+
+/* Hero */
+#hero { width: 100%; max-height: 380px; object-fit: cover; border-radius: 8px; display:block; }
+
+#testgrid blockquote { background: var(--card-bg); border-left: 6px solid var(--accent-2); padding: 18px; margin: 12px; border-radius: 8px; box-shadow: 0 8px 20px rgba(16,32,8,0.06); }
+#testgrid blockquote h1 { margin: 0 0 8px 0; font-size: 1.05rem; color: #16310a; }
+#testgrid img { max-width: 360px; width: 100%; height: auto; border-radius: 8px; object-fit: cover; }
+
+
+@media screen and (max-width: 760px) {
+	.main-content.card { margin: 8px; padding: 16px; }
+	#testgrid blockquote { margin: 8px 0; }
+}
+

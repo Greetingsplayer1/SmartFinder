@@ -287,7 +287,7 @@ body {
   background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
   color: #ffffff;
   text-align: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   padding: 12px;
